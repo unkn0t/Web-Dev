@@ -1,0 +1,46 @@
+body {
+    height: 100%;
+    margin: 0;
+    background: #dfe0e8;
+}
+
+#panes {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+#left-pane {
+    width: 50%;
+    height: 100%;
+    align-content: center;
+}
+
+#right-pane {
+    width: 50%;
+    height: 100%;
+    background: white;
+}
+
+#logo {
+    padding-left: 30%;
+    padding-right: 30%;
+    height: 15%;
+}
+
+#logo img {
+    height: 100%;
+    aspect-ratio: initial;
+    margin: -28px;
+}
+
+#slogan {
+    padding-left: 30%;
+    margin: 0;
+}
+
+#slogan h1 {
+    width: 50%;
+    font-weight: normal;
+    font-size: 1.6rem;
+}
