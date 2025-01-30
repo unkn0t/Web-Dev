@@ -1,46 +1,200 @@
-body {
-    height: 100%;
+* {
     margin: 0;
-    background: #dfe0e8;
+    padding: 0;
 }
 
-#panes {
-    display: flex;
+#content {
+    width: 100vw;
     height: 100vh;
+    background: #f3f3f3;
+}
+
+#centered-content {
+    display: flex;
+    position: relative;
+    width: 70%;
+    top: 17%;
+    left: 10%;
+    height: 450px;
+}
+
+#sign-in {
+    width: 45%;
+    padding: 2rem;
+}
+
+#sign-in form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    background: white;
+    border-radius: 0.7rem;
+    padding: 1rem;
+    height: 80%;
     width: 100%;
+    align-items: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-#left-pane {
-    width: 50%;
-    height: 100%;
-    align-content: center;
+.form-el {
+    border: none;
+    border-radius: 0.25rem;
+    height: 10%;
+    font-size: 1.2rem;
+    width: 90%;
 }
 
-#right-pane {
-    width: 50%;
-    height: 100%;
+#sign-in input {
+    border: lightgray solid 1px;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+#log-in {
+    background: #0866ff;
+    color: white;
+    font-weight: bold;
+    height: 15%;
+    cursor: pointer;
+}
+
+#log-in:hover {
+    filter: brightness(0.9);
+}
+
+#brand {
+    padding: 2rem;
+    font-size: 14px;
+    text-wrap: nowrap;
+}
+
+#brand a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#brand a:hover {
+    text-decoration: underline;
+}
+
+#new {
+    background: #42b72a;
+    color: white;
+    font-weight: bold;
+    width: 60%;
+    height: 15%;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+#new:hover {
+    filter: brightness(0.9);
+}
+
+#new::before {
+    content: "";
+    display: block;
+    position: relative;
+    top: -2rem;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+}
+
+#forget a {
+    color: #0866ff;
+    text-decoration: none;
+}
+
+#forget a:hover {
+    text-decoration: underline;
+}
+
+#greeting {
+    width: 55%;
+    text-wrap: wrap;
+    padding: 5rem;
+    margin-left: 2rem;
+}
+
+#greeting h2 {
+    font-weight: normal;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    color: #1c1e21;
+    margin-right: 2rem;
+}
+
+#greeting img {
+    width: 70%;
+    aspect-ratio: initial;
+    margin-left: -28px;
+}
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 15px;
+    font-size: 12px;
     background: white;
 }
 
-#logo {
-    padding-left: 30%;
-    padding-right: 30%;
-    height: 15%;
+#locale-list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
 }
 
-#logo img {
-    height: 100%;
-    aspect-ratio: initial;
-    margin: -28px;
+#site-links ul {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    list-style: none;
 }
 
-#slogan {
-    padding-left: 30%;
-    margin: 0;
+#site-links::before {
+    content: "";
+    display: block;
+    position: relative;
+    top: -0.5rem;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background-color: lightgray;
 }
 
-#slogan h1 {
-    width: 50%;
-    font-weight: normal;
-    font-size: 1.6rem;
+#locale-list a {
+    color: gray;
+    text-decoration: none;
+}
+
+#add-locale {
+    border: none;
+    border-radius: 0.3rem;
+    color: #3a3a3a;
+    background-color: #e3e3e3;
+    display: flex;
+    align-items: center;
+}
+
+#site-links a {
+    color: gray;
+    text-decoration: none;
+}
+
+#locale-list a:hover {
+    text-decoration: underline;
+}
+
+#site-links a:hover {
+    text-decoration: underline;
+}
+
+#copyright {
+    color: gray;
 }

@@ -2,56 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Facebook - log in or sign up</title>
 
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<div id="panes">
-    <div id="left-pane">
-        <div id="logo">
-            <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="Facebook">
-        </div>
-        <div id="slogan"><h1>Connect with friends and the world<br>
-            around you on Facebook.</h1>
-        </div>
-    </div>
 
-    <div id="right-pane">
-        <form>
-            <input placeholder="Email or phone number" aria-label="Email or phone number">
-            <input placeholder="Password" aria-label="Password">
-
-            <div><button>Log In</button></div>
-            <div><a href="#">Forgot password?</a></div>
-            <div><a href="#">Create new account</a></div>
-        </form>
-        <div>
-            <a href="#">Create a Page</a>
-            for a celebrity, brand or business.
+<div id="content">
+    <div id="centered-content">
+        <div id="greeting">
+            <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="facebook">
+            <h2>Connect with friends and the world around you on Facebook.</h2>
+        </div>
+        <div id="sign-in">
+            <form>
+                <input class="form-el" placeholder="Email or phone number" aria-label="Email ot phone number">
+                <input class="form-el" placeholder="Password" aria-label="Password">
+                <button class="form-el" type="submit" id="log-in">Log In</button>
+                <div id="forget"><a href="#">Forget password?</a></div>
+                <button class="form-el" type="submit" id="new">Create new account</button>
+            </form>
+            <p id="brand"><a href="#">Create a Page</a> for a celebrity, brand or business.</p>
         </div>
     </div>
 </div>
-<footer>
-    <ul>
-        <li>English (US)</li>
-        <li>Русский</li>
-        <li>Қазақша</li>
-        <li>Türkçe</li>
-        <li>Bahasa Indonesia</li>
-        <li>中文(简体)</li>
+
+<div id="footer">
+    <ul id="locale-list">
+        <li><a href="#">English (US)</a></li>
+        <li><a href="#">Русский</a></li>
+        <li><a href="#">Қазақша</a></li>
+        <li><a href="#">Türkçe</a></li>
+        <li><a href="#">Bahasa Indonesia</a></li>
+        <li><a href="#">中文(简体)</a></li>
+        <li><a href="#">Deutsch</a></li>
+        <li><button id="add-locale"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+        </svg></button></li>
     </ul>
-    <ul>
-        <li>Sign Up</li>
-        <li>Log In</li>
-        <li>Messenger</li>
-        <li>Facebook Lite</li>
-        <li>Video</li>
-        <li>Places</li>
-        <li>Marketplace</li>
-        <li>Games</li>
-    </ul>
-    <span>Meta &copy; 2025</span>
-</footer>
+    <div id="site-links"><ul>
+        <li><a href="#">Sign Up</a></li>
+        <li><a href="#">Log In</a></li>
+        <li><a href="#">Messenger</a></li>
+        <li><a href="#">Facebook Lite</a></li>
+        <li><a href="#">Video</a></li>
+        <li><a href="#">Places</a></li>
+        <li><a href="#">Games</a></li>
+        <li><a href="#">Marketplace</a></li>
+        <li><a href="#">Meta Pay</a></li>
+        <li><a href="#">Meta Store</a></li>
+        <li><a href="#">Meta Quest</a></li>
+        <li><a href="#">Ray-Ban Meta</a></li>
+        <li><a href="#">Meta AI</a></li>
+    </ul></div>
+    <div id="copyright">
+        <span>Meta &copy 2025</span>
+    </div>
+</div>
+
 </body>
 </html>
