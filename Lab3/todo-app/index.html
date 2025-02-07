@@ -10,12 +10,14 @@
 <header>
   <h2>ToDo List</h2>
 </header>
-<div>
-  <label for="task-input"></label><input type="text" id="task-input" placeholder="New Task">
-  <button onclick="addTask()">Add</button>
-</div>
-<div>
-  <ul id="task-list"></ul>
+<div id="content">
+  <div id="search">
+    <label for="task-input"></label><input type="text" id="task-input" placeholder="New Task">
+    <button id="search-btn" onclick="addTask()">Add</button>
+  </div>
+  <div id="tasks">
+    <ul id="task-list"></ul>
+  </div>
 </div>
 <script src="logic.js"></script>
 </body>
