@@ -1,0 +1,13 @@
+<div class="categories">
+  <ul class="nav nav-pills nav-justified">
+    @for (category of categories; track category.id) {
+      <li class="nav-item">
+        @if (category.id === selectedCategoryId) {
+          <a class="nav-link active" href="#">{{ category.name }}</a>
+        } @else {
+          <a class="nav-link" href="#" (click)="selectCategory(category.id)">{{ category.name }}</a>
+        }
+      </li>
+    }
+  </ul>
+</div>

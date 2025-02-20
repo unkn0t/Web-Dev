@@ -4,9 +4,6 @@
   padding: 0;
 }
 
-:root {
-  --primary-color: #605DC8;
-  --secondary-color: #8B89E6;
-  --accent-color: #ffffff;
-  --shadow-color: #E8E8E8;
+body {
+  background-color: #0b090a;
 }

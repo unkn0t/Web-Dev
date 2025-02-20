@@ -1,8 +1,9 @@
 <main>
   <header class="brand-name">
-    <h2>Products</h2>
+    <h1><span>Kaspi</span> Store</h1>
   </header>
   <section class="content">
-    <app-products></app-products>
+    <app-category-list (categorySelected)="onCategoryChange($event)"></app-category-list>
+    <app-product-list></app-product-list>
   </section>
 </main>
