@@ -1,0 +1,51 @@
+.results {
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+  margin-top: 50px;
+  justify-content: space-around;
+}
+
+.listing {
+  background: var(--accent-color);
+  border: solid 1px #333;
+  border-radius: 30px;
+  padding-bottom: 30px;
+}
+
+.listing-heading {
+  color: var(--primary-color);
+  padding: 10px 20px 0 20px;
+}
+
+.listing-photo {
+  display: flex;
+  height: 200px;
+  width: auto;
+  align-items: center;
+  padding: 10px;
+}
+
+.listing-photo img {
+  max-height: 100%;
+  width: 100%;
+  object-fit: contain;
+  aspect-ratio: initial;
+  border: none;
+}
+
+.listing-rating {
+  padding: 10px 20px 20px 20px;
+}
+
+.listing-description {
+  padding: 10px 20px 20px 20px;
+}
+
+.telegram-btn {
+  color: var(--accent-color);
+  background-color: deepskyblue;
+  border: none;
+  border-radius: 10px;
+}
