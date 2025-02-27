@@ -1,0 +1,15 @@
+<article>
+  <section class="listing-description">
+    <form [formGroup]="saveForm" (submit)="save()">
+      <label for="title">Title</label>
+      <input id="title" type="text"
+             [value]="album?.title"
+            [defaultValue]="album?.title"
+            formControlName="title"/>
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+    <p class="listing-location">userId: {{ album?.userId }}</p>
+    <a [routerLink]="['/albums', album?.id, 'photos']">Photos</a>
+  </section>
+</article>
+

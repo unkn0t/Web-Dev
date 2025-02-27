@@ -1,0 +1,37 @@
+.results {
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.card {
+  color: whitesmoke;
+  background-color: #252422;
+}
+
+.card-body {
+  cursor: pointer;
+}
+
+.delete-btn {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.delete-btn:hover {
+  background-color: #b52b2b;
+}
+
+.delete-btn:active {
+  background-color: #d92121;
+}
+
+.card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
