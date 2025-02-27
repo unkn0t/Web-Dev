@@ -10,7 +10,6 @@ import {ProductService} from '../product.service';
 })
 export class ProductComponent {
   @Input() product!: Product;
-  likeCount = 0;
 
   private productService = inject(ProductService);
 
@@ -19,8 +18,11 @@ export class ProductComponent {
     window.open(shareUrl, '_blank');
   }
 
-  likeProduct() {
-    this.likeCount += 1;
+  async likeProduct() {
+    if (this.product.likes === 0) {
+      this.product.likes += 1;
+      await this.productService.saveProduct(this.product);
+    }
   }
 
   removeProduct() {
