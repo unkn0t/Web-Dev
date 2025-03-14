@@ -20,7 +20,7 @@ export interface Photo {
   providedIn: 'root'
 })
 export class AlbumsService {
-  private albumsUrl = 'https://jsonplaceholder.typicode.com/albums';
+  private albumsUrl = 'http://localhost:3000/albums';
 
   private http = inject(HttpClient);
 

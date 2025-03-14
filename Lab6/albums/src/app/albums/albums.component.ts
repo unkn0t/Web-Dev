@@ -20,6 +20,10 @@ export class AlbumsComponent {
     });
   }
 
+  addNewAlbum() {
+    this.router.navigate(['/albums/new']);
+  }
+
   deleteAlbum(id: number) {
     this.albumsService.deleteAlbum(id).subscribe(() => {
       this.albums = this.albums.filter(album => album.id !== id);

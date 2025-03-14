@@ -1,0 +1,13 @@
+<article>
+  <section class="listing-description">
+    <form [formGroup]="saveForm" (submit)="save()">
+      <label for="title">Title</label>
+      <input id="title" type="text"
+             formControlName="title"/>
+      <label for="userId">User Id</label>
+      <input id="userId" type="text"
+             formControlName="userId"/>
+      <button type="submit" class="btn btn-primary" (click)="save()">Save</button>
+    </form>
+  </section>
+</article>
