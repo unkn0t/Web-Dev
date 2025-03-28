@@ -1,4 +1,4 @@
-from django.http import JsonResponse, Http404
+from django.http import JsonResponse
 from django.forms.models import model_to_dict
 
 from .models import Product, Category
@@ -18,7 +18,7 @@ def get_product(request, id):
     try:
         product = Product.objects.get(pk=id)
     except Product.DoesNotExist:
-        raise Http404("Product does not exist")
+        return JsonResponse({"error": "Product does not exist"}, status=404)
     return JsonResponse(model_to_dict(product))
 
 
@@ -26,7 +26,7 @@ def get_category(request, id):
     try:
         category = Category.objects.get(pk=id)
     except Category.DoesNotExist:
-        raise Http404("Category does not exist")
+        return JsonResponse({"error": "Category does not exist"}, status=404)
     return JsonResponse(model_to_dict(category))
 
 
