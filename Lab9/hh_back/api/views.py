@@ -1,6 +1,9 @@
 from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from .models import Company, Vacancy
 from .serializers import CompanySerializer, VacancySerializer
+
+import json
 
 
 def company_list(request):
@@ -24,10 +27,19 @@ def company_list_vacancies(request, id):
     return JsonResponse({"vacancies": serializer.data})
 
 
+@csrf_exempt
 def vacancy_list(request):
-    vacancies = Vacancy.objects.all()
-    serializer = VacancySerializer(vacancies, many=True)
-    return JsonResponse({"vacancies": serializer.data})
+    if request.method == "POST":
+        data = json.loads(request.body)
+        serializer = VacancySerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data, status=201)
+        return JsonResponse(serializer.errors, status=400)
+    else:
+        vacancies = Vacancy.objects.all()
+        serializer = VacancySerializer(vacancies, many=True)
+        return JsonResponse({"vacancies": serializer.data})
 
 
 def vacancy_get(request, id):
